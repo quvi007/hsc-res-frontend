@@ -12,7 +12,7 @@ function Subjects() {
     useEffect(() => {
         const fetchSubjects = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/subjects');
+                const response = await axios.get('https://hsc-res-2b4d5cfc8dbf.herokuapp.com/api/subjects');
                 setSubjects(response.data);
             } catch (error) {
                 console.error('Error fetching subjects:', error);

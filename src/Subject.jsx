@@ -13,7 +13,7 @@ function Subject() {
     useEffect(() => {
         const fetchSubject = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/api/subjects/${id}`);
+                const response = await axios.get(`https://hsc-res-2b4d5cfc8dbf.herokuapp.com/api/subjects/${id}`);
                 setSubject(response.data);
             } catch (error) {
                 console.error('Error fetching subject:', error);
@@ -28,7 +28,7 @@ function Subject() {
                 setLoadingChapters(true);
                 setChaptersError(null);
                 // Adjust this endpoint to match your backend
-                const { data } = await axios.get(`http://localhost:4000/api/subjects/${id}/chapters`);
+                const { data } = await axios.get(`https://hsc-res-2b4d5cfc8dbf.herokuapp.com/api/subjects/${id}/chapters`);
                 setChapters(data || []);
             } catch (error) {
                 console.error('Error fetching chapters:', error);
