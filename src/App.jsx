@@ -9,9 +9,9 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Subjects />} />
-                <Route path="/subjects/:id" element={<Subject/>} />
-                <Route path="/subjects/:id/chapters/:chapterId" element={<h1>This is a chapter</h1>} />
+                <Route path="/hsc-res-frontend" element={<Subjects />} />
+                <Route path="/hsc-res-frontend/subjects/:id" element={<Subject/>} />
+                <Route path="/hsc-res-frontend/subjects/:id/chapters/:chapterId" element={<h1>This is a chapter</h1>} />
             </Routes>
         </Router>
     );
