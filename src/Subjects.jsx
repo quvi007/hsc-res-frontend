@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 const COLORS = ['primary', 'success', 'danger', 'warning', 'info', 'dark', 'secondary'];
 
-// const API = "https://hsc-res-2b4d5cfc8dbf.herokuapp.com";
-const API = "http://localhost:4000";
+const API = "https://hsc-res-2b4d5cfc8dbf.herokuapp.com";
+// const API = "http://localhost:4000";
 
 function Subjects() {
     const [subjects, setSubjects] = useState([]);

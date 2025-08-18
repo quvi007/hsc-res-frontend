@@ -3,8 +3,8 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 
-// const API = "https://hsc-res-2b4d5cfc8dbf.herokuapp.com";
-const API = "http://localhost:4000";
+const API = "https://hsc-res-2b4d5cfc8dbf.herokuapp.com";
+// const API = "http://localhost:4000";
 
 function AddVideo() {
     const { id, chapterId } = useParams();
