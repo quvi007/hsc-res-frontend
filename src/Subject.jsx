@@ -92,12 +92,6 @@ function Subject() {
                                 <div className="d-flex flex-wrap gap-2">
                                     <Link
                                         to={`/subjects/${id}/chapters/${chapter.id}`}
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        View Chapter
-                                    </Link>
-                                    <Link
-                                        to={`/subjects/${id}/chapters/${chapter.id}`}
                                         className="btn btn-success btn-sm"
                                     >
                                         Lecture Videos
