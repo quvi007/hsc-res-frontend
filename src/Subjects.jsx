@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 
 const COLORS = ['primary', 'success', 'danger', 'warning', 'info', 'dark', 'secondary'];
 
+// const API = "https://hsc-res-2b4d5cfc8dbf.herokuapp.com";
+const API = "http://localhost:4000";
+
 function Subjects() {
     const [subjects, setSubjects] = useState([]);
     const navigate = useNavigate();
@@ -12,7 +15,7 @@ function Subjects() {
     useEffect(() => {
         const fetchSubjects = async () => {
             try {
-                const response = await axios.get('https://hsc-res-2b4d5cfc8dbf.herokuapp.com/api/subjects');
+                const response = await axios.get(API + '/api/subjects');
                 setSubjects(response.data);
             } catch (error) {
                 console.error('Error fetching subjects:', error);

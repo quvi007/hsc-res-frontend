@@ -3,6 +3,9 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 
+// const API = "https://hsc-res-2b4d5cfc8dbf.herokuapp.com";
+const API = "http://localhost:4000";
+
 function Subject() {
     const [subject, setSubject] = useState(null);
     const [chapters, setChapters] = useState([]);
@@ -13,7 +16,7 @@ function Subject() {
     useEffect(() => {
         const fetchSubject = async () => {
             try {
-                const response = await axios.get(`https://hsc-res-2b4d5cfc8dbf.herokuapp.com/api/subjects/${id}`);
+                const response = await axios.get(API + `/api/subjects/${id}`);
                 setSubject(response.data);
             } catch (error) {
                 console.error('Error fetching subject:', error);
@@ -28,7 +31,7 @@ function Subject() {
                 setLoadingChapters(true);
                 setChaptersError(null);
                 // Adjust this endpoint to match your backend
-                const { data } = await axios.get(`https://hsc-res-2b4d5cfc8dbf.herokuapp.com/api/subjects/${id}/chapters`);
+                const { data } = await axios.get(API + `/api/subjects/${id}/chapters`);
                 setChapters(data || []);
             } catch (error) {
                 console.error('Error fetching chapters:', error);
@@ -47,6 +50,12 @@ function Subject() {
         <div className="container my-4">
             <h1 className="mb-2">{subject.name}</h1>
             <p className="text-muted">{subject.description}</p>
+            <button
+                onClick={() => navigate("/")}
+                className="btn btn-outline-secondary btn-sm"
+            >
+                Back
+            </button>
 
             <hr className="my-4" />
 

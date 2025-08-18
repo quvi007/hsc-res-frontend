@@ -9,5 +9,5 @@ export default defineConfig({
     , server: {
     host: true
     },
-    base: '/hsc-res-frontend/',
+    base: '/hsc-res-frontend',
 })
