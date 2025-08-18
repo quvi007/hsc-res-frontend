@@ -97,7 +97,7 @@ function Subject() {
                                         View Chapter
                                     </Link>
                                     <Link
-                                        to={`/subjects/${id}/chapters/${chapter.id}/videos`}
+                                        to={`/subjects/${id}/chapters/${chapter.id}`}
                                         className="btn btn-success btn-sm"
                                     >
                                         Lecture Videos
