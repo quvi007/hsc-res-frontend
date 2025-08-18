@@ -10,7 +10,7 @@ import ViewVideo from './ViewVideo';
 
 function App() {
     return (
-        <Router basename='/hsc-res-frontend'>
+        <Router basename='/hsc-res'>
             <Routes>
                 <Route path="/" element={<Subjects />} />
                 <Route path="/subjects/:id" element={<Subject/>} />
